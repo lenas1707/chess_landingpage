@@ -10,10 +10,10 @@ export function Header() {
         </div>
         <nav>
           <ul className="flex space-x-4">
-            <li><a href="#basics" className="hover:text-gray-300">Básico</a></li>
-            <li><a href="#pieces" className="hover:text-gray-300">Peças</a></li>
-            <li><a href="#board" className="hover:text-gray-300">Tabuleiro</a></li>
-            <li><a href="#math" className="hover:text-gray-300">Matemática</a></li>
+            <li><a href="#básico" className="hover:text-gray-300">Básico</a></li>
+            <li><a href="#peças" className="hover:text-gray-300">Peças</a></li>
+            <li><a href="#tabuleiro" className="hover:text-gray-300">Tabuleiro</a></li>
+            <li><a href="#matemática" className="hover:text-gray-300">Matemática</a></li>
           </ul>
         </nav>
       </div>
