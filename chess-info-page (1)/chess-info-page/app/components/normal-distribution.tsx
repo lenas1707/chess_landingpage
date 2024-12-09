@@ -56,14 +56,14 @@ export function NormalDistribution() {
     ctx.fillStyle = 'black'
     ctx.font = '12px Arial'
     ctx.textAlign = 'center'
-    ctx.fillText('Number of Moves', width / 2, height - 10)
+    ctx.fillText('Número de movimentos', width / 2, height - 10)
 
     // Y-axis label
     ctx.save()
     ctx.translate(15, height / 2)
     ctx.rotate(-Math.PI / 2)
     ctx.textAlign = 'center'
-    ctx.fillText('Frequency', 0, 0)
+    ctx.fillText('Frequência', 0, 0)
     ctx.restore()
 
     // Draw tick marks for x-axis (number of moves)
@@ -99,7 +99,7 @@ export function NormalDistribution() {
       width={600} 
       height={320} 
       className="mx-auto"
-      aria-label="Normal distribution of chess game lengths"
+      aria-label="Distribuição Normal da duração dos jogos de xadrez"
       role="img"
     />
   )
