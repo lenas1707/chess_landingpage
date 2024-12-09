@@ -10,87 +10,88 @@ export default function ChessInfoPage() {
       <Header />
       <main className="container mx-auto px-4 py-8">
         <section id="basics" className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Chess Basics</h2>
+          <h2 className="text-2xl font-bold mb-4">O básico do xadrez</h2>
           <p className="mb-4">
-            Chess is a two-player strategy game played on a board with 64 squares arranged in an 8x8 grid. Each player starts with 16 pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns.
+            O xadrez é um jogo de estratégia para dois jogadores jogado em um tabuleiro com 64 quadrados dispostos em um tabuleiro de 8x8. Cada jogador começa com 16 peças: um rei, uma rainha, duas torres, dois cavalos, dois bispos e oito peões.
           </p>
           <p>
-            The objective of the game is to checkmate the opponent's king, which means the king is in a position to be captured (in check) and there is no legal move to escape capture.
+            O objetivo do jogo é dar xeque-mate no rei do adversário, o que significa que o rei está em posição de ser capturado (em xeque) e não há jogada legal para escapar da captura.
           </p>
         </section>
 
         <section id="pieces" className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Chess Pieces</h2>
+          <h2 className="text-2xl font-bold mb-4">Peças do Xadrez</h2>
           <ul className="list-disc list-inside">
-            <li>King: Moves one square in any direction</li>
-            <li>Queen: Moves any number of squares in any direction</li>
-            <li>Rook: Moves any number of squares horizontally or vertically</li>
-            <li>Bishop: Moves any number of squares diagonally</li>
-            <li>Knight: Moves in an "L" shape (two squares in one direction, then one square perpendicular)</li>
-            <li>Pawn: Moves forward one square at a time, captures diagonally</li>
+            <li>Rei: Move-se uma casa em qualquer direção</li>
+            <li>Rainha: Move-se qualquer número de casas em qualquer direção</li>
+            <li>Torre: Move-se qualquer número de casas na horizontal ou na vertical</li>
+            <li>Bispo: Move-se qualquer número de casas na diagonal</li>
+            <li>Cavalo: Move-se em “L” (dois quadrados em qualquer direção, depois um quadrado na perpendicular)</li>
+            <li>Peão: Move-se uma casa por vez, captura na diagonal </li>
           </ul>
         </section>
 
         <section id="board" className="mb-8">
           <h2 className="text-2xl font-bold mb-4">Chessboard</h2>
           <p className="mb-4">
-            The chessboard consists of 64 squares arranged in an 8x8 grid. The squares alternate between light and dark colors, typically white and black. Below is an interactive chessboard where you can click on squares to highlight them:
+            O tabuleiro de xadrez consiste em 64 quadrados dispostos em uma grade de 8x8. Os quadrados alternam entre cores claras e escuras, geralmente branco e preto. Abaixo está um tabuleiro de xadrez interativo no qual você pode clicar nos quadrados para destacá-los:
           </p>
           <div className="flex flex-col items-center">
             <Chessboard />
-            <p className="mt-4 text-sm text-gray-600">Click on a square to highlight it. Click again to deselect.</p>
+            <p className="mt-4 text-sm text-gray-600">Clique no quadrado para destaca-lo. Clique novamente para cancelar o destaque</p>
           </div>
         </section>
 
         <section id="math" className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Chess Mathematics</h2>
+          <h2 className="text-2xl font-bold mb-4">Matemática do Xadrez</h2>
           <p className="mb-4">
-            Chess has many interesting mathematical properties and statistics. Here are some fascinating mathematical aspects of chess:
+            O xadrez tem muitas propriedades matemáticas e estatísticas interessantes. Aqui estão alguns aspectos matemáticos interessantes do xadrez:
           </p>
           <div className="space-y-8">
             <div>
-              <h3 className="text-xl font-semibold mb-2">Number of Possible Games</h3>
-              <p>The number of possible unique chess games is estimated to be around:</p>
+              <h3 className="text-xl font-semibold mb-2">Número de jogos possíveis</h3>
+              <p>O número de possíveis jogos de xadrez únicos é estimado em cerca de:</p>
               <MathComponent equation="10^{120}" />
-              <p className="text-sm text-gray-600">This number is known as the Shannon number.</p>
+              <p className="text-sm text-gray-600">Esse número é conhecido como Shannon Number. Existem outras estimativas, mas Shannon desenvolveu a mais famosa.</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Knight's Tour</h3>
-              <p>The number of possible knight's tours on a standard 8x8 chessboard is:</p>
-              <MathComponent equation="26,534,728,821,064" />
+              <h3 className="text-xl font-semibold mb-2">Movimentos do Cavalo</h3>
+              <p>O número de possíveis movimentos do cavalo em um tabuleiro de xadrez padrão 8x8 é:</p>
+              <MathComponent equation="26.534.728.821.064" />
+              <p className="text-sm text-gray-600">Euler iniciou o estudos sobre a quantidade de movimentos que um cavalo pode executar em uma partida de xadrez.</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Probability of Winning</h3>
-              <p>In a game between two players of equal skill, the probability of winning for the player with white pieces is approximately:</p>
+              <h3 className="text-xl font-semibold mb-2">Probabilidade de vitória</h3>
+              <p>Dado um jogo entre dois jogadores de igual habilidade, a chance das peças brancas ganharem é:</p>
               <MathComponent equation="P(\text{White Wins}) \approx 0.55" />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Elo Rating System</h3>
-              <p>The expected score of a player is calculated using the following formula:</p>
+              <h3 className="text-xl font-semibold mb-2">Sistema de Ranqueamento de Xadrez</h3>
+              <p>A pontuação de um jogador é calculada pela seguinte formula:</p>
               <MathComponent equation="E_A = \frac{1}{1 + 10^{(R_B - R_A) / 400}}" />
-              <p className="text-sm text-gray-600">Where E_A is the expected score of player A, and R_A and R_B are the ratings of players A and B respectively.</p>
+              <p className="text-sm text-gray-600">Onde E_A é a pontuação esperada do jogador A, R_A e R_B são as classificações dos jogadores A e B respectivamente.</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Matrix Representation of a Chess Game</h3>
-              <p className="mb-4">A chess game can be represented as an 8x8 matrix, where each cell contains a value representing a piece or an empty square. Here's an example of the initial board state:</p>
+              <h3 className="text-xl font-semibold mb-2">Representação Matricial do Xadrez</h3>
+              <p className="mb-4">Um jogo de xadrez pode ser representado como uma matriz 8x8, em que cada célula contém um valor que representa uma peça ou um quadrado vazio. Abaixo temos um exemplo do estado inicial do tabuleiro:</p>
               <ChessMatrix />
-              <p className="mt-4">In this representation:</p>
+              <p className="mt-4">Nessa representação:</p>
               <ul className="list-disc list-inside mt-2">
-                <li>Positive numbers represent white pieces</li>
-                <li>Negative numbers represent black pieces</li>
-                <li>0 represents an empty square</li>
-                <li>The absolute values represent: 1 (Pawn), 2 (Knight), 3 (Bishop), 4 (Rook), 5 (Queen), 6 (King)</li>
+                <li>Números positivos representam as peças brancas</li>
+                <li>Números negativos representam as peças</li>
+                <li>0 representa os quadrados vazios</li>
+                <li>Os valores absolutos representam: 1 (Peão), 2 (Cavalo), 3 (Bispo), 4 (Torre), 5 (Rainha), 6 (Rei)</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Normal Distribution of Chess Game Lengths</h3>
-              <p className="mb-4">The number of moves in chess games typically follows a normal distribution. For example, in master-level games:</p>
+              <h3 className="text-xl font-semibold mb-2">Distribuição Normal da duração de um jogo de xadrez</h3>
+              <p className="mb-4">O número de movimentos de um jogo de xadrez respeita a distribuição normal. Por exemplo, em jogos de alto nível:</p>
               <NormalDistribution />
               <ul className="list-disc list-inside mt-2">
-                <li>Mean (μ): Approximately 40 moves</li>
-                <li>Standard Deviation (σ): About 10 moves</li>
+                <li>Média (μ): Aproximadamente 40 movimentos</li>
+                <li>Desvio padrão (σ): Cerca de 10 movimentos</li>
               </ul>
-              <p className="mt-2">This means that about 68% of master-level games last between 30 and 50 moves, and about 95% last between 20 and 60 moves.</p>
+              <p className="mt-2">Isso significa que cerca de 68% dos jogos de nível mestre duram entre 30 e 50 movimentos, e cerca de 95% duram entre 20 e 60 movimentos.</p>
             </div>
           </div>
         </section>
